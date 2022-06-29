@@ -1,0 +1,9 @@
+@forward "./header";
+@forward "./navigation";
+@forward "./aside";
+@forward "./results";
+@forward "./search-block";
+@forward "./products";
+@forward "./pagination";
+
+@use "media" as *;

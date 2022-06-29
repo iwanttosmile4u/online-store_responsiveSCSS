@@ -1,0 +1,31 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.menu {
+  padding: $universal-padding;
+  display: flex;
+
+  &__icon {
+    &::after {
+      content: ">>";
+      margin: 0 5px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+  }
+
+  &__tabs-item--active {
+    @include font($color: $accent-color, $size: 14px, $line-height: 17px);
+    &::after {
+      content: ">>";
+      margin: 0 5px;
+      color: black;
+    }
+  }
+
+  &__tabs-item {
+    @include font($size: 14px, $line-height: 17px);
+  }
+}

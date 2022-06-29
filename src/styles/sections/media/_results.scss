@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+  .right-block {
+    width: 65%;
+    float: right;
+  }
+
+  .results {
+    display: block;
+  }
+
+  .btn-colored {
+    &--top-favorite {
+      border-radius: 8px;
+      margin-bottom: 3px;
+    }
+  }
+}

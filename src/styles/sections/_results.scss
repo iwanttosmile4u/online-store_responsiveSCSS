@@ -1,0 +1,14 @@
+.main-block {
+  display: flex;
+}
+
+.right-block {
+  width: 98%;
+}
+
+.results {
+  display: none;
+  &__search-box {
+    margin: 0 auto;
+  }
+}

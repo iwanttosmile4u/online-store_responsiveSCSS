@@ -1,0 +1,90 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+@media (min-width: 1200px) {
+  .aside {
+    width: 32%;
+    @include flex(flex, column, space-between, stretch);
+
+    &__main-block {
+      margin: 20px 13px 0 10px;
+    }
+
+    &__filters {
+      @include flex(flex, row, space-between, stretch);
+      margin: 0 0 26px;
+    }
+
+    &__filters-text {
+      @include font($size: 18px, $line-height: 21px);
+    }
+
+    &__filters-btn {
+      @include btn-colored(
+        $bgr: $component-bgr,
+        $b-radius: 8px,
+        $color: #000000
+      );
+      padding: 2px 5px;
+      box-shadow: 0 2px rgb(0 0 0 / 14%);
+    }
+
+    &__filters--results {
+      margin: 20px 10px 15px;
+    }
+
+    &__all-filters {
+      @include border-shadow;
+      padding: 20px 45px;
+      align-self: stretch;
+      flex-grow: 1;
+    }
+
+    &__btn {
+      margin-top: 32px;
+      margin-bottom: 20px;
+
+      &--large-btn {
+        @include btn-colored($b-radius: 8px);
+        @include font($color: $component-bgr, $size: 18px, $line-height: 21px);
+        padding: 17px 105px;
+        width: 100%;
+      }
+    }
+  }
+
+  .filter-header {
+    @include font($weight: 800, $size: 18px, $line-height: 22px);
+  }
+
+  .group {
+    &__filter-header {
+      margin-top: 20px;
+    }
+
+    &__item {
+      padding: 8px 0;
+    }
+
+    &__item-check {
+      margin-right: 8px;
+    }
+
+    &__item-text {
+      display: block;
+      padding: 8px 0;
+    }
+
+    &--flex {
+      @include flex(flex, row, space-between, stretch);
+    }
+  }
+
+  .filters-line {
+    color: #d6d6d6;
+
+    &__group {
+      margin: 30px 0;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.footer {
+  @include flex(flex, row, center, center);
+
+  &__main {
+    margin: 25px 0 25px;
+  }
+}
+
+.pagination {
+  @include flex(flex, row, stretch, stretch);
+}
+
+.page-direction {
+  @include flex(flex, row, center, center);
+  background: $wishlist-btn;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &__content {
+    @include font($weight: bold, $size: 22px, $line-height: 18px);
+  }
+
+  &--active-numb {
+    background: $accent-color;
+    color: $component-bgr;
+  }
+}
+
+.pagination-numb {
+  @include flex(flex, row, center, center);
+  background: $wishlist-btn;
+  border-radius: 20px;
+
+  &__page-direction {
+    margin: 0 5px;
+  }
+
+  &__page {
+    @include flex(flex, row, center, center);
+    margin: 0 15px;
+  }
+
+  &__page-item {
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  &__page-link {
+    color: $main-color;
+  }
+
+  &__page-link--active {
+    color: $component-bgr;
+  }
+}

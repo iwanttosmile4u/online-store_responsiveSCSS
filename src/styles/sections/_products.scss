@@ -1,0 +1,108 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.wrapper {
+  @include flex(flex, column, center, center);
+  padding: 25px 10px 0;
+}
+
+.product {
+  @include border-shadow;
+  @include flex(flex, column, space-around, stretch);
+  width: 100%;
+  max-width: 400px;
+
+  &__wrapper {
+    margin: 20px 0;
+  }
+
+  &__header {
+    @include flex(flex, column, center, center);
+    padding: 10px;
+    height: 350px;
+  }
+
+  &__header-img {
+    max-width: 90%;
+  }
+
+  &__rating-price {
+    @include flex(flex, row, space-between, stretch);
+    @include font($size: 18px, $line-height: 21px);
+    margin-left: 25px;
+  }
+
+  &__rating-price-price {
+    margin: auto 25px auto auto;
+  }
+
+  &__body {
+    margin: 25px 0 22px 24px;
+  }
+
+  &__body-title {
+    @include font($weight: 800, $size: 16px, $line-height: 19px);
+  }
+
+  &__body-link {
+    color: $main-color;
+    cursor: pointer;
+  }
+
+  &__body-description {
+    @include font($weight: 300, $size: 12px, $line-height: 14px);
+  }
+
+  &__footer {
+    display: flex;
+  }
+}
+
+.btn-colored {
+  @include btn-colored($b-radius: 3px);
+  padding: 6px 10px;
+  font-size: 17px;
+
+  &--icon-star {
+    &::after {
+      content: url("./images/product-icons/star.svg");
+      margin-left: 9px;
+    }
+  }
+
+  &--cart {
+    @include btn-colored($b-radius: 0px 0px 8px 0px);
+    @include font(
+      $color: $component-bgr,
+      $weight: 500,
+      $size: 14px,
+      $line-height: 14px
+    );
+    text-transform: uppercase;
+    flex-grow: 1;
+    width: 200px;
+    padding: 15px 10px;
+    &::before {
+      content: url("./images/product-icons/shopping-bag.svg");
+      margin-right: 2px;
+    }
+  }
+}
+
+.btn-wishlist {
+  @include btn-colored(
+    $bgr: $wishlist-btn,
+    $b-radius: 0px 0px 0px 8px,
+    $color: $main-color
+  );
+  @include font($weight: 500, $size: 14px, $line-height: 18px);
+  text-transform: uppercase;
+  flex-grow: 1;
+  width: 200px;
+  padding: 15px 10px;
+
+  &::before {
+    content: url("./images/product-icons/heart.svg");
+    margin-right: 2px;
+  }
+}

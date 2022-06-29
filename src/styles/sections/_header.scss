@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.header {
+  padding: $universal-padding;
+  display: flex;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.company-title {
+  &__text {
+    @include font($accent-color, 600, 26px, 24px);
+    margin: 22px auto 0 18px;
+  }
+}

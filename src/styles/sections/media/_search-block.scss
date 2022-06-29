@@ -1,0 +1,9 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+@media (min-width: 720px) {
+  .search-box {
+    width: 100%;
+    max-width: 98%;
+  }
+}

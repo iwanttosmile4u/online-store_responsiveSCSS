@@ -1,0 +1,39 @@
+@use "./variables" as *;
+
+@mixin font($color: $main-color, $weight: 400, $size, $line-height) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin border-shadow(
+  $bgr-col: $component-bgr,
+  $box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216),
+  $radius: 8px
+) {
+  background: $bgr-col;
+  box-shadow: $box-shadow;
+  border-radius: $radius;
+}
+
+@mixin flex($display, $direction, $justify-cont, $align-items) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify-cont;
+  align-items: $align-items;
+}
+
+@mixin btn-colored(
+  $bgr: $accent-color,
+  $b-radius,
+  $b-style: none,
+  $color: $component-bgr,
+  $cursor: pointer
+) {
+  background: $bgr;
+  border-radius: $b-radius;
+  border-style: $b-style;
+  color: $color;
+  cursor: $cursor;
+}

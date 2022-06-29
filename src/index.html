@@ -1,13 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <header class="header">
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <img class="logo__img" src="./images/header/logo.png" />
+        </a>
+      </div>
+      <div class="company-title">
+        <h1 class="company-title__text">Online Store</h1>
+      </div>
+    </header>
+
+    <nav class="menu">
+      <div class="menu__icon">
+        <a class="menu__icon-link" href="#">
+          <img
+            class="menu__icon-img"
+            src="./images/header/home.svg"
+            alt="home-icon"
+          />
+        </a>
+      </div>
+      <div class="menu__tabs">
+        <p class="menu__tabs-item--active">eCommerce</p>
+        <p class="menu__tabs-item">Electronics</p>
+      </div>
+    </nav>
+
+    <main class="main-block">
+      <aside class="aside aside__main-block">
+        <div class="aside__filters">
+          <p class="aside__filters-text">Filters</p>
+          <span class="aside__filters-btn">&lt &lt</span>
+        </div>
+
+        <div class="aside__all-filters">
+          <h4 class="filter-header">Multi Range</h4>
+
+          <div class="group group__filter-header">
+            <div class="group__item">
+              <input class="group__item-check" type="radio" />
+              <label for="group__item-text">$10</label>
+            </div>
+            <div class="group__item">
+              <input class="group__item-check" type="radio" />
+              <label for="group__item-text">$10-$100</label>
+            </div>
+            <div class="group__item">
+              <input class="group__item-check" type="radio" />
+              <label for="group__item-text">$100-$500</label>
+            </div>
+            <div class="group__item">
+              <input class="group__item-check" type="radio" />
+              <label for="group__item-text">$500</label>
+            </div>
+            <div class="group__item">
+              <input class="group__item-check" type="radio" />
+              <label for="group__item-text">All</label>
+            </div>
+            <hr class="filters-line filters-line__group" />
+          </div>
+
+          <h4 class="filter-header">Category</h4>
+
+          <div class="group group--flex group__filter-header">
+            <div class="group__checkbox">
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Cell Phones</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Computers & Tablets</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Cell Phone Accessories</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Appliances</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">iPhone Accessories</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Cameras & Camcorders</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">iPhone Cases & Clips</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">TV & Home Theater</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Small Kitchen Appliances</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Audio</label>
+              </div>
+            </div>
+
+            <div class="group__products-count">
+              <span class="group__item-text">1920</span>
+              <span class="group__item-text">1820</span>
+              <span class="group__item-text">462</span>
+              <span class="group__item-text">6556</span>
+              <span class="group__item-text">120</span>
+              <span class="group__item-text">353</span>
+              <span class="group__item-text">45</span>
+              <span class="group__item-text">456</span>
+              <span class="group__item-text">55</span>
+              <span class="group__item-text">10</span>
+            </div>
+          </div>
+
+          <hr class="filters-line filters-line__group" />
+
+          <h4 class="filter-header">Brand</h4>
+
+          <div class="group group--flex group__filter-header">
+            <div class="group__checkbox">
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Insigni</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Samsung</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Apple</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">HP</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Sony</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Metra</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Dyne</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">LG</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Canon</label>
+              </div>
+              <div class="group__item">
+                <input class="group__item-check" type="checkbox" />
+                <label for="group__item-text">Speck</label>
+              </div>
+            </div>
+
+            <div class="group__products-count">
+              <span class="group__item-text">220</span>
+              <span class="group__item-text">120</span>
+              <span class="group__item-text">320</span>
+              <span class="group__item-text">32</span>
+              <span class="group__item-text">520</span>
+              <span class="group__item-text">55</span>
+              <span class="group__item-text">120</span>
+              <span class="group__item-text">98</span>
+              <span class="group__item-text">99</span>
+              <span class="group__item-text">575</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aside__btn">
+          <button class="aside__btn--large-btn">CLEAR ALL FILTERS</button>
+        </div>
+      </aside>
+
+      <div class="right-block">
+        <div class="results">
+          <div class="aside__filters aside__filters--results">
+            <p class="aside__filters-text">7,618 results found</p>
+            <div class="btn-colored btn-colored--top-favorite">
+              <img
+                class="btn-colored__img"
+                src="./images/filters-icons/heart.svg"
+                alt="favorite"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="search-box results__search-box">
+          <input class="search-box__text" type="text" placeholder="Search" />
+          <a class="search-box__btn-search">
+            <img
+              class="search-box__search-img"
+              src="./images/search-box/search.svg"
+              alt="search"
+            />
+          </a>
+        </div>
+
+        <section class="wrapper">
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/apple-watch.png"
+                alt="apple-watch"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$399</span>
+            </div>
+            <div class="product__body">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple Watch Series 4 GPS</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/jbl-speaker.png"
+                alt="speaker"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$199</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >JBL SpeakerS</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/iphone-x.png"
+                alt="iphone"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$899</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple iPhone X 128GB</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/beats-headphones.png"
+                alt="headphones"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$459</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Beats Headphones</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/apple-watch.png"
+                alt="macbook"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$2499</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple Macbook Pro 512GB SSD</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/ipad-pro.png"
+                alt="ipad"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$899</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple iPad Pro 64GB</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist">wishlist</button>
+              <button class="btn-colored btn-colored--cart">add to cart</button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/iphone-x.png"
+                alt="ipad"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$899</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple iPad Pro 64GB</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/macbook-pro.png"
+                alt="ipad"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$899</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple iPad Pro 64GB</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="product product__wrapper">
+            <div class="product__header">
+              <img
+                class="product__header-img"
+                src="./images/product-img/ipad-pro.png"
+                alt="ipad"
+              />
+            </div>
+            <div class="product__rating-price">
+              <button class="btn-colored btn-colored--icon-star">3.4</button>
+              <span class="product__rating-price-price">$899</span>
+            </div>
+            <div class="product__body body__rating-price">
+              <h3 class="product__body-title">
+                <a class="product__body-link" href="#" target="_blank"
+                  >Apple iPad Pro 64GB</a
+                >
+              </h3>
+              <p class="product__body-description">
+                Redesigned from scratch and completely revised.
+              </p>
+            </div>
+            <div class="product__footer">
+              <button class="btn-wishlist btn-wishlist--desktop">
+                wishlist
+              </button>
+              <button
+                class="btn-colored btn-colored--cart btn-colored--desktop"
+              >
+                add to cart
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer footer__main">
+      <section class="pagination">
+        <div class="page-direction">
+          <a class="page-direction__content" href="#"> &lt </a>
+        </div>
+
+        <div class="pagination-numb pagination-numb__page-direction">
+          <ul class="pagination-numb__page">
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">1</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">2</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">3</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">4</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">5</a>
+            </li>
+            <li
+              class="
+                page-direction page-direction--active-numb
+                pagination-numb__page-item
+              "
+            >
+              <a
+                class="
+                  pagination-numb__page-link pagination-numb__page-link--active
+                "
+                href="#"
+                >6</a
+              >
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">7</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">8</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">9</a>
+            </li>
+            <li class="pagination-numb__page-item">
+              <a class="pagination-numb__page-link" href="#">10</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-direction">
+          <a class="page-direction__content" href="#"> &gt </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

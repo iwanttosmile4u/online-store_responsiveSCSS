@@ -1,0 +1,17 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.search-box {
+  @include border-shadow;
+  padding: 8px;
+  width: 95%;
+  &__text {
+    @include font($search-text, 300px, 20px, 26px);
+    border: none;
+  }
+  &__btn-search {
+    float: right;
+    cursor: pointer;
+    margin: 4px auto;
+  }
+}

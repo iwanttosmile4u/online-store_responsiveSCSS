@@ -1,0 +1,56 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+@media (min-width: 720px) {
+  .wrapper {
+    @include flex(flex, row, space-between, stretch);
+    flex-wrap: wrap;
+  }
+
+  .product {
+    width: 45%;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product {
+    width: 33%;
+
+    &__wrapper {
+      margin-right: -8px;
+    }
+
+    &__rating-price {
+      margin-left: 15px;
+    }
+
+    &__rating-price-price {
+      margin: auto 10px auto auto;
+    }
+
+    &__body {
+      margin: 25px 5px 22px 17px;
+    }
+
+    &__body-description {
+      margin-top: 5px;
+    }
+  }
+
+  .btn-wishlist {
+    &--desktop {
+      padding: 15px 0;
+    }
+  }
+
+  .btn-colored {
+    &--desktop {
+      padding: 15px 0;
+    }
+  }
+
+  .wrapper {
+    align-items: stretch;
+  }
+}
